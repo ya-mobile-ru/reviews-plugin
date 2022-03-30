@@ -1,0 +1,99 @@
+<div class="reviews-form">
+   <form class="skip-forms" data-request="{{ __SELF__ }}::onSaveReview"
+      data-request-files
+      data-request-success="sendReviews(this);"
+      data-request-error="noSendReviews(this);"
+   >
+      <input type="hidden" name="reviewpPrt" value="">
+      {% if __SELF__.CITECODE %}
+         <input type="hidden" id="goggle_token" name="goggle_token" value="">
+      {% endif %}
+      
+      {{ form_token() }}
+      {{ form_sessionKey() }}
+      <div class="form-group-inputs">
+         <div class="form-group-rating">
+            <input type="hidden" name="reviewRating" id="ec-rating-resource-35" value="" />
+            <div class="ec-rating ec-clearfix rating-body" data-storage-id="ec-rating-resource-35">
+               <div class="ec-rating-stars">
+                  <span data-rating="1" data-description="Плохо">
+                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" width="30" height="30" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x" ><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                  </span>
+                  <span data-rating="2" data-description="Есть и получше">
+                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" width="30" height="30" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x" ><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                  </span>
+                  <span data-rating="3" data-description="Средне">
+                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" width="30" height="30" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x" ><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                  </span>
+                  <span data-rating="4" data-description="Хорошо">
+                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" width="30" height="30" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x" ><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                  </span>
+                  <span data-rating="5" data-description="Отлично! Рекомендую!">
+                     <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="star" width="30" height="30" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512" class="svg-inline--fa fa-star fa-w-18 fa-2x" ><path fill="currentColor" d="M259.3 17.8L194 150.2 47.9 171.5c-26.2 3.8-36.7 36.1-17.7 54.6l105.7 103-25 145.5c-4.5 26.3 23.2 46 46.4 33.7L288 439.6l130.7 68.7c23.2 12.2 50.9-7.4 46.4-33.7l-25-145.5 105.7-103c19-18.5 8.5-50.8-17.7-54.6L382 150.2 316.7 17.8c-11.7-23.6-45.6-23.9-57.4 0z"></path></svg>
+                  </span>
+               </div>
+               <div class="ec-rating-description f13">Оцените по пятибальной шкале</div>
+            </div>
+         </div>
+      </div>
+      
+      <div class="form-group-inputs">
+         <label>
+            <span>Имя<sup>*</sup></span>
+            <input type="text" name="reviewName" autocomplete="off" value="" required placeholder="Ваше имя">
+         </label>
+         <label>
+            <span>Контакты</span>
+            <input type="text" name="reviewContacts" autocomplete="off" value="" placeholder="Телефон/E-mail">
+         </label>
+      </div>
+      
+      <label>
+         <span>Текст отзыва<sup>*</sup></span>
+         <textarea id="review_texteditor" name="reviewText" rows="7" value="" required placeholder="Оставьте свою рекомендацию о нашей компании"></textarea>
+      </label>
+      <div class="form-group-inputs input-file">
+         {% if __SELF__.FilesPhoto %}
+         	<span class="file-input-label-text">Размер одной фотографии не более 5 Мб. Максимальное количество фотографий: 7 шт.</span>
+            <div class="file-input-body">
+               <label for="file-1" class="file-input-label nofile js-input-files-label">
+                  <span>Выберите фото</span>
+                  <div class="file-input-icon"><svg enable-background="new 0 0 24 24" height="512" viewBox="0 0 24 24" width="512" xmlns="http://www.w3.org/2000/svg"><path d="m12 14c-.192 0-.384-.073-.53-.22l-5.25-5.25c-.471-.471-.136-1.28.53-1.28h2.75v-6c0-.689.561-1.25 1.25-1.25h2.5c.689 0 1.25.561 1.25 1.25v6h2.75c.666 0 1.001.809.53 1.28l-5.25 5.25c-.146.147-.338.22-.53.22z"/><path d="m11 21.192-11-5.042v2.35c0 .199.118.379.301.458l10.699 4.652z"/><path d="m13 21.192v2.419l10.699-4.652c.183-.08.301-.26.301-.459v-2.35z"/><path d="m17.581 11.558-3.636 3.636c-.52.52-1.211.806-1.945.806s-1.425-.286-1.944-.806l-3.636-3.636-6.42 2.942 12 5.5 12-5.5z"/></svg></div>
+                  <input type="file" name="reviewFile[]" multiple id="file-1" accept=".jpg,.jpeg,.webp,.png,.bmp" class="file-input js-input-files">
+               </label>
+               <div class="btn-del js-btn-del hide" title="Удалить файлы"></div>
+            </div>
+         {% endif %}
+      </div>
+      <div class="reviews-form-info">Нажимая на кнопку, Вы даете согласие на обработку персональных данных, указанных на сайте. Контактные данные не будут отображены в отзыве, они нужны только для обратной связи.</div>
+      <button class="btn-review btn-review-2" type="submit">Отправить</button>
+
+      <div class="modal-success">
+         <p class="modal-success__title">{{ __SELF__.SuccessSend }}</p>
+         <p class="modal-success__icon">
+            <svg width="150" height="150" viewBox="0 0 510 510" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+               <path fill="#fff" d="M150.45,206.55l-35.7,35.7L229.5,357l255-255l-35.7-35.7L229.5,285.6L150.45,206.55z M459,255c0,112.2-91.8,204-204,204 S51,367.2,51,255S142.8,51,255,51c20.4,0,38.25,2.55,56.1,7.65l40.801-40.8C321.3,7.65,288.15,0,255,0C114.75,0,0,114.75,0,255 s114.75,255,255,255s255-114.75,255-255H459z"></path>
+            </svg>
+         </p>
+      </div>
+      <div class="modal-success-error">
+         <p>{{ __SELF__.ErrorSend }}<br></p>
+         <span class="btn-review" onclick="location.reload(false);">Обновить</span>
+      </div>
+      {% if __SELF__.CITECODE %}
+         <script src="https://www.google.com/recaptcha/api.js?render={{ __SELF__.CITECODE }}"></script>
+         <script>
+            (function () {
+            grecaptcha.ready(function() {
+               grecaptcha.execute('{{ __SELF__.CITECODE }}', {action: 'homepage'}).then(function(token) {
+                   inputs = document.querySelectorAll('#goggle_token');
+                   for (let input of inputs) {
+                      input.value = token;
+                   }
+               });
+             });
+         }());
+         </script>
+      {% endif %}
+   </form>
+</div>

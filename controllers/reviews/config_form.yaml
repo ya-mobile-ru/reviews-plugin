@@ -1,0 +1,30 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Review
+
+# Model Form Field configuration
+form: $/yamobile/reviews/models/review/fields.yaml
+
+# Model Class name
+modelClass: Yamobile\Reviews\Models\Review
+
+# Default redirect location
+defaultRedirect: yamobile/reviews/reviews
+
+# Create page
+create:
+    title: 'yamobile.reviews::lang.page_title.create'
+    redirect: yamobile/reviews/reviews/update/:id
+    redirectClose: yamobile/reviews/reviews
+    flashSave: 'yamobile.reviews::lang.messages.save'
+
+# Update page
+update:
+    title: 'yamobile.reviews::lang.page_title.edit'
+    redirect: yamobile/reviews/reviews
+    redirectClose: yamobile/reviews/reviews
+    flashSave: 'yamobile.reviews::lang.messages.save'
+    flashDelete: 'yamobile.reviews::lang.messages.remove'

@@ -1,0 +1,55 @@
+fields:
+    publish:
+        label: 'yamobile.reviews::lang.models.fields.publish'
+        span: full
+        default: false
+        type: switch
+    name:
+        label: 'yamobile.reviews::lang.models.fields.name'
+        span: left
+        required: true
+        type: text
+    contacts:
+        type: text
+        label: 'yamobile.reviews::lang.models.fields.contacts'
+        span: auto
+    rating:
+        label: 'yamobile.reviews::lang.models.fields.rating'
+        options:
+            - 'yamobile.reviews::lang.models.fields.select_rating'
+            - 1
+            - 2
+            - 3
+            - 4
+            - 5
+        showSearch: 0
+        span: auto
+        type: dropdown
+    date:
+        label: 'yamobile.reviews::lang.models.fields.date'
+        type: datepicker
+        mode: date
+        span: auto
+        required: true
+    files:
+        label: 'yamobile.reviews::lang.models.fields.files'
+        mode: image
+        imageWidth: '100'
+        imageHeight: '100'
+        useCaption: true
+        thumbOptions:
+            mode: crop
+            extension: auto
+        span: full
+        type: fileupload
+    text:
+        type: textarea
+        label: 'yamobile.reviews::lang.models.fields.text'
+        size: small
+        span: full
+        required: true
+    reply:
+        type: textarea
+        label: 'yamobile.reviews::lang.models.fields.reply'
+        size: small
+        span: full

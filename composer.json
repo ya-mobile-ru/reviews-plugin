@@ -1,0 +1,9 @@
+{
+    "name": "yamobile/reviews-plugin",
+    "type": "october-plugin",
+    "description": "Plugin for displaying and moderating reviews on the site",
+    "require": {
+        "composer/installers": "~1.0",
+        "inetis/listswitch": "^1.0.3"
+    }
+}

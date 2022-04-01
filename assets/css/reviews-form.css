@@ -358,8 +358,8 @@
 /* /. Reviews, rating */
 
 /* success/Error message */
-.modal-success,
-.modal-success-error {
+.reviews-modal-success,
+.reviews-modal-success-error {
    display: flex;
    justify-content: center;
    align-items: center;
@@ -377,43 +377,43 @@
    padding: 40px;
 }
 
-.modal-success-error {
+.reviews-modal-success-error {
    background: #f1714e;
    opacity: 0.95;
 }
 
-.modal-success {
+.reviews-modal-success {
    background: linear-gradient(45deg, #3366cc 32%, #0099ff 100%);
    opacity: 0.95;
 }
 
-.modal-success.active,
-.modal-success-error.active {
+.reviews-modal-success.active,
+.reviews-modal-success-error.active {
    top: 0;
 }
 
-.modal-success-error p {
+.reviews-modal-success-error p {
    color: #fff;
    font-size: 20px;
    line-height: normal;
    margin: 0 0 20px 0;
 }
 
-.modal-success__title,
-.modal-success__icon {
+.reviews-modal-success__title,
+.reviews-modal-success__icon {
    transition-duration: 0.5s;
    transform: translateY(-100px);
    opacity: 0;
    transition-property: transform, opacity;
 }
 
-.modal-success.active .modal-success__title,
-.modal-success.active .modal-success__icon {
+.reviews-modal-success.active .reviews-modal-success__title,
+.reviews-modal-success.active .reviews-modal-success__icon {
    opacity: 1;
    transform: translateY(0px);
 }
 
-.modal-success__title {
+.reviews-modal-success__title {
    transition-delay: 0.2s;
    color: #fff;
    font-size: 24px;
@@ -421,18 +421,18 @@
    margin: 0 0 15px;
 }
 @media (max-width: 479px) {
-   .modal-success__title {
+   .reviews-modal-success__title {
       font-size: 20px;
    }
 }
 
-.modal-success__icon {
+.reviews-modal-success__icon {
    transition-delay: 0.6s;
    max-width: 120px;
    margin: 0 auto;
 }
 
-.modal-success__icon svg {
+.reviews-modal-success__icon svg {
    width: 100%;
    height: 100%;
 }

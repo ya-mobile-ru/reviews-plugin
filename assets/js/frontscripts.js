@@ -64,12 +64,12 @@ Array.prototype.forEach.call(inputs, function (input) {
 /** выбор файлов */
 
 function sendReviews(form) {
-   form.querySelector('.modal-success').classList.add('active');
+   form.querySelector('.reviews-modal-success').classList.add('active');
    form.querySelector('button').disabled = true;
 }
 
 function noSendReviews(form) {
-   form.querySelector('.modal-success-error').classList.add('active');
+   form.querySelector('.reviews-modal-success-error').classList.add('active');
    form.querySelector('button').disabled = true;
 }
 

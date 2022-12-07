@@ -81,7 +81,7 @@ class Plugin extends PluginBase {
                'label'       => 'yamobile.reviews::lang.plugin.menu.name',
                'url'         => Backend::url('yamobile/reviews/Reviews'),
                'icon'        => 'icon-comments',
-               'permissions' => ['yamobile.reviews.*'],
+               'permissions' => ['yamobile.reviews.access_reviews'],
                'order'       => 500,
          ],
       ];

@@ -56,7 +56,19 @@ class Plugin extends PluginBase {
     *
     * @return array
     */
-   public function registerPermissions() {}
+   public function registerPermissions() {
+    return [
+        'yamobile.gallery.access_reviews' => [
+            'label' => 'yamobile.reviews::lang.permissions.reviews',
+            'tab' => 'Reviews',
+            'order' => 200,
+            'roles' => [
+                'developer',
+                'publisher',
+            ],
+        ],
+    ];
+   }
 
    /**
     * Registers back-end navigation items for this plugin.
@@ -69,7 +81,7 @@ class Plugin extends PluginBase {
                'label'       => 'yamobile.reviews::lang.plugin.menu.name',
                'url'         => Backend::url('yamobile/reviews/Reviews'),
                'icon'        => 'icon-comments',
-               'permissions' => ['yamobile.reviews.*'],
+               'permissions' => ['yamobile.reviews.access_reviews'],
                'order'       => 500,
          ],
       ];

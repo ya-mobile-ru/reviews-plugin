@@ -12,6 +12,10 @@ return [
 		]
 	],
 
+    'permissions' => [
+        'reviews' => 'Manage reviews',
+    ],
+
    'models' => [
       'fields' => [
          'publish'         => 'Publish review',

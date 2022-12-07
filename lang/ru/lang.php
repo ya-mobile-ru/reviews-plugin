@@ -12,6 +12,10 @@ return [
 		]
 	],
 
+    'permissions' => [
+        'reviews' => 'Управление отзывами',
+    ],
+
    'models' => [
       'fields' => [
          'publish'       => 'Опубликовать отзыв',

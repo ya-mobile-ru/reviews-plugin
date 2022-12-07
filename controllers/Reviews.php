@@ -30,4 +30,5 @@ class Reviews extends Controller
         return $this->asExtension('FormController')->update($recordId);
    }
 
+   public $requiredPermissions = ['yamobile.reviews.access_reviews'];
 }

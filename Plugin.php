@@ -62,10 +62,6 @@ class Plugin extends PluginBase {
             'label' => 'yamobile.reviews::lang.permissions.reviews',
             'tab' => 'Reviews',
             'order' => 200,
-            'roles' => [
-                'developer',
-                'publisher',
-            ],
         ],
     ];
    }

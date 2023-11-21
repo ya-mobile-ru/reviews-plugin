@@ -58,7 +58,7 @@ class Plugin extends PluginBase {
     */
    public function registerPermissions() {
     return [
-        'yamobile.gallery.access_reviews' => [
+        'yamobile.reviews.access_reviews' => [
             'label' => 'yamobile.reviews::lang.permissions.reviews',
             'tab' => 'Reviews',
             'order' => 200,
